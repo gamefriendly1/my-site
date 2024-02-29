@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Game Friendly</title>
+    <link rel="shortcut icon" href="imgs/icon.ico" /> 
+    <link rel="icon" type="image/vnd.microsoft.icon" href="imgs/icon.ico"> 
+    <link rel="icon" type="image/x-icon" href="imgs/icon.ico"> 
+    <link rel="icon" href="imgs/icon.ico" />
+    <style type="text/css">
+        #menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #665d6d;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #525252;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+h5 {
+  font-size: 20px;
+  color: #ffffff;
+}
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+}
+h2 {
+  font-size: 25px;
+  font-family: cursive;
+  text-align: center;
+}
+h3 {
+  font-size: 23px;
+  text-align: center;
+  font-family: cursive;
+}
+body {
+        background: rgb(255, 255, 255) 
+      }
+    section {
+        background: rgb(166, 104, 202);
+        color: rgb(0, 0, 0);
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+      }
+      p {
+        font-family: cursive;
+        text-align: center;
+        font-size: 23px;
+      }
+      h6 {
+        font-family: cursive;
+        text-align: center;
+        font-size: 23px;
+      }
+      /* Оформление панели */ 
+      #side-checkbox { 
+        display: none; 
+      } 
+      .side-panel { 
+        position: fixed; 
+        z-index: 999999; 
+        top: 0; 
+        left: -360px; 
+        background: #b786ca; 
+        transition: all 0.5s; 
+        width: 320px; 
+        height: 100vh; 
+        box-shadow: 10px 0 20px rgba(0,0,0,0.4); 
+        color: #000000; 
+        padding: 40px 20px; 
+      } 
+        .side-title { 
+          font-size: 20px; 
+          padding-bottom: 10px; 
+          margin-bottom: 20px; 
+          border-bottom: 2px solid #BFE2FF; 
+        } /* Оформление кнопки на странице */ 
+        .side-button-1-wr { 
+          text-align: center; 
+          /* Контейнер для кнопки, чтобы было удобнее ее разместить */ 
+        } 
+        .side-button-1 { 
+          display: inline-block; 
+        } 
+        .side-button-1 .side-b { 
+          margin: 10px; 
+          text-decoration: none; 
+          position: relative; 
+          font-size: 20px; 
+          line-height: 20px; 
+          padding: 12px 30px; 
+          color: rgb(0, 0, 0); 
+          font-weight: bold; 
+          text-transform: uppercase; 
+          font-family: 'Roboto', Тahoma, sans-serif; 
+          background: #9961b9; 
+          cursor: pointer; 
+          border: 2px solid #BFE2FF; 
+        } 
+        .side-button-1 .side-b:hover, .side-button-1 .side-b:active, .side-button-1 .side-b:focus { 
+          color: #353535; 
+        } 
+        .side-button-1 .side-b:after, .side-button-1 .side-b:before { 
+          position: absolute; 
+          height: 4px; 
+          left: 50%; 
+          bottom: -6px; content: ""; 
+          transition: all 280ms ease-in-out; 
+          width: 0; } 
+          .side-button-1 .side-open:after, .side-button-1 .side-open:before {
+             background: green; 
+            } 
+            .side-button-1 .side-close:after, .side-button-1 .side-close:before {
+               background: red; 
+              } .side-button-1 .side-b:before { 
+                top: -6px; 
+              } .side-button-1 .side-b:hover:after, .side-button-1 .side-b:hover:before { 
+                width: 100%; left: 0; 
+              } /* Переключатели кнопки 1 */ 
+              .side-button-1 .side-close { 
+                display: none; 
+              } #side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open { 
+                display: none; 
+              } #side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close { 
+                display: block; } #side-checkbox:checked + .side-panel { 
+                  left: 0; } /* Оформление кнопки на панеле */ 
+                  .side-button-2 { 
+                    font-size: 30px; 
+                    border-radius: 20px; 
+                    position: absolute; 
+                    z-index: 1; top: 8px; 
+                    right: 8px; cursor: 
+                    pointer; transform: 
+                    rotate(45deg); 
+                    color: #8db4db; 
+                    transition: all 280ms ease-in-out; } 
+                    .side-button-2:hover { 
+                      transform: rotate(45deg) scale(1.1); 
+                      color: #FFF; 
+                    }
+
+
+.acor-container {
+    margin: 20px 0;
+}
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: #a6e1f8;
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: Verdana, sans-serif; 
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+}
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+.acor-container label {
+    cursor: pointer;
+    background-color: #8733b7;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: #f8f8f8;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;   
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+.acor-container label:hover {
+    color: #FFF;
+}
+.acor-container input{
+    display: none;
+}
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+.acor-container input:checked + label {
+    background-color: #9657c0;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+}
+.acor-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+
+        h4 {
+        font-family: cursive;
+        text-align: center;
+        font-size: 40px; 
+        }
+
+
+
+        .acor-container {
+    margin: 20px 0;
+}
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: #BFE2FF;
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: Verdana, sans-serif; 
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+}
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+.acor-container label {
+    cursor: pointer;
+    background-color: #337AB7;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: #BFE2FF;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;   
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+.acor-container label:hover {
+    color: #FFF;
+}
+.acor-container input{
+    display: none;
+}
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+.acor-container input:checked + label {
+    background-color: #285f8f;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+}
+.acor-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+
+
+<body>
+    <div class="logo">
+        <h1>Game Friendly</h1>
+    </div>
+
+    
+    <h5>.</h5>
+    
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+  
+      <ul class="menu__box">
+        <li><a class="menu__item" href="index.html">Главная страница</a></li>
+        <li><a class="menu__item" href="info.html">Информация</a></li>
+        <li><a class="menu__item" href="inde.html">Flexbox Froggy</a></li>
+        <li><a class="menu__item" href="ind.html">Grid Garden</a></li>
+        <li><a class="menu__item" href="in.html">Найди пару карте</a></li>
+        <li><a class="menu__item" href="indeex.html">2048</a></li>
+        <li><a class="menu__item" href="tictac.html">Tic Tac Toe</a></li>
+      </ul>
+
+      <div class="acor-container"> 
+    
+        <input type="radio" name="acor" id="acor1" checked="checked" />
+        <label for="acor1">Flexbox Froggy</label>
+        <div class="acor-body">
+            <p>Flexbox Froggy - это основанная на физике обучающая игра о Flexbox. Игроки управляют лягушкой на платформах и собирают монеты. Они используют Flexbox для решения задач и прохождения уровней. Цель - пройти все, используя гибкость и адаптируемость Flexbox. Сложность растет, как и понимание Flexbox. Flexbox Froggy делает изучение Flexbox веселым и интерактивным.</p>
+        </div>
+        
+        <input type="radio" name="acor" id="acor2" />
+        <label for="acor2">Grid Garden</label>
+        <div class="acor-body">
+            <p>Grid Garden - это головоломка о дизайне сада, где игроки создают свой сад на сетке с различными элементами, создавая красивую и функциональную композицию. Игроки выбирают из множества растений, дорожек и фонтанов для создания сада мечты и настройки его внешнего вида. Геймплей интуитивен и увлекателен, позволяя игрокам наслаждаться созданием своего сада и сравнивать его с другими.</p>
+        </div>
+        
+        <input type="radio" name="acor" id="acor3" />
+        <label for="acor3">Найди пару карте</label>
+        <div class="acor-body">
+            <p>Найди пару карте” - это увлекательная игра для детей и взрослых, которая развивает внимание, память и логическое мышление.</p>
+        </div> 
+
+        <input type="radio" name="acor" id="acor4" />
+        <label for="acor4">2048</label>
+        <div class="acor-body">
+            <p>2048 – головоломка на удвоение чисел с конечной целью 2048 и 4096. Перемещаем плитки, складываем одинаковые числа. Игра завершается без доступных ходов или при достижении необходимого числа. Даются очки, доступна переигровка с рекордом.</p>
+        </div> 
+
+        <input type="radio" name="acor" id="acor5" />
+        <label for="acor5">Tic Tac Toe</label>
+        <div class="acor-body">
+            <p>Tic-Tac-Toe - это игра на бумаге для двух игроков, где они по очереди ставят крестики и нолики в сетку 3х3. Выигрывает тот, кто первым построит линию из трех своих символов по горизонтали, вертикали или диагонали. Если никому не удается этого сделать, то игра заканчивается ничьей.</p>
+        </div> 
+        
+        
+    </div>
+
+               <h4>Всю информация о сайте вы можете найти в телеграмм боте @Game_Friendly_bot</h4>
+    
+          
+          <h6><a href="https://forms.yandex.ru/u/653faf525d2a065ff4df0342/"><img src="imgs/qr-code.png" width="200px" height="200px" alt="Помогите сделать нам сайт лучше! Пройдите анкетирование отсканировав QR-code." title="Помогите сделать нам сайт лучше! Пройдите анкетирование отсканировав QR-code или нажав на него."/></a></h6>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Игры</title>
+        <link rel="shortcut icon" href="imgs/icon.ico" /> 
+    <link rel="icon" type="image/vnd.microsoft.icon" href="imgs/icon.ico"> 
+    <link rel="icon" type="image/x-icon" href="imgs/icon.ico"> 
+    <link rel="icon" href="imgs/icon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+.gif2 {
+
+text-align: center;
+
+display:block; /* Устанавливаем */
+
+width:800px; /* Ширина и высота картинки */
+
+height:415px;
+
+/* Заливаем блок статичной картинкой */
+}
+
+/* Как видно, начальное (статическое) изображение задано как фон блока с шириной и высотой этого изображения. */
+
+a.gif2 img {
+visibility:hidden; /* Aнимация не была видна в ситуации, когда мышь не наведена */
+
+}
+
+a.gif2:hover {
+  text-align: center;
+background:none; /* Фон (статичное изображение) не было видно при наведении мыши */
+
+}
+
+a.gif2:hover img {
+  text-align: center;
+visibility:visible; /* При наведении анимация показывается */
+
+border:0; /* без обрамления ;) */
+
+}
+
+.box{
+            display: none;
+            width: 100%;
+            
+        }
+        
+        a:hover + .box,.box:hover{
+            display: block;
+            img: relative;
+            z-index: 100;
+        }
+
+        .center {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          width: 10%;
+        }
+        
+        </style>
+    </head>
+    
+
+    <body>
+
+        
+          
+          <a> <img src="imgs/flexbox-froggy.png" class="center"> </a>
+          <div class="box">
+            <iframe src="inde.html" width = "1800px" height = "820px">
+            </iframe>
+          </div>
+          <a> <img src="imgs/kandinsky-download-1704807681400.png" class="center"> </a>
+          <div class="box">
+            <iframe src="ind.html" width = "1800px" height = "820px">
+            </iframe>
+          </div>
+          <a> <img src="imgs/Picsart_24-01-13_14-02-00-666.jpg" class="center"> </a>
+          <div class="box">
+            <iframe src="in.html" width = "1800px" height = "820px">
+            </iframe>
+          </div> 
+        
+
+
+        <script type="text/javascript">
+            $(function(){
+              $('#giflist li a img').hover(function(){
+                // on mouse enter
+                var customdata = $(this).parent().attr('href');
+                $(this).attr('src',customdata); 
+              }, function(){
+                // on mouse leave
+                $(this).attr('src',$(this).attr('data-orig'));
+              });
+            
+            });
+
+            
+            </script>
+    </body>
+
+
+
+
+
+</html>

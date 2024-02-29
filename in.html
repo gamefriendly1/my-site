@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Найди пару карте</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- подключаем нормализатор CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<!-- подключаем свои стили -->
+	<link rel="stylesheet" href="./style.css">
+	<style type="text/css">
+		.button1 {border-radius: 12px; font-size: 28px; padding: 24px 16px; background-color:rgb(100, 112, 175);}
+		a{
+                color: aqua;
+        }
+	</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<!-- общий блок для всего -->
+	<div class="wrap">
+		<!-- блок с игрой -->
+		<div class="game"></div>
+		<!-- модальное окно, которое появится после сбора всех пар -->
+		<div class="modal-overlay">
+			<div class="modal">
+				<!-- поздравительная надпись -->
+				<h2 class="winner">Ты выиграл!</h2>
+				<!-- кнопка перезапуска игры -->
+				<button class="restart">Сыграем ещё?</button>
+				<head>
+					<style>
+					  .button10 {
+					  background-color: #FF4500;
+					  border: none;
+					  color: white;
+					  padding: 20px 34px;
+					  text-align: center;
+					  text-decoration: none;
+					  display: inline-block;
+					  font-size: 20px;
+					  margin: 4px 2px;
+					  cursor: pointer;
+					  }
+					</style>
+				  </head>
+				  <body>
+					
+					</body>
+			</div>
+		</div>
+  </div>
+
+	  <!-- подключаем jQuery -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<!-- и наш скрипт -->
+	<script  src="./script.js"></script>
+
+</body>
+</html>

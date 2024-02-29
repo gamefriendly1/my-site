@@ -1,0 +1,43 @@
+https://forms.yandex.ru/u/653faf525d2a065ff4df0342/
+
+<input type="checkbox" id="side-checkbox" /> 
+      <div class="side-panel"> 
+        <label class="side-button-2" for="side-checkbox">+</label> <div class="side-title">Разработчик:</div> 
+        <p>Назаров Егор</p> 
+      </div> 
+      <div class="side-button-1-wr"> 
+        <label class="side-button-1" for="side-checkbox"> 
+          <div class="side-b side-open">Разработчик</div> 
+          <div class="side-b side-close">Закрыть</div> 
+        </label> 
+      </div>
+
+      <div class="acor-container"> 
+<input type="checkbox" name="chacor" id="chacor1" checked="checked" />
+        <label for="chacor1">1 игра - Flexbox Froggy</label>
+        <div class="acor-body">
+            <p>Flexbox Froggy - это основанная на физике обучающая игра о Flexbox. 
+              Игроки управляют лягушкой на платформах и собирают монеты. 
+              Они используют Flexbox для решения задач и прохождения уровней.
+              Цель - пройти все, используя гибкость и адаптируемость Flexbox.
+              Сложность растет, как и понимание Flexbox.
+              Flexbox Froggy делает изучение Flexbox веселым и интерактивным.</p>
+        </div>
+        
+        <input type="checkbox" name="chacor" id="chacor2" />
+        <label for="chacor2">2 игра - Grid Garden</label>
+        <div class="acor-body">
+            <p>Grid Garden - это головоломка о дизайне сада, где игроки создают свой сад на сетке 
+              с различными элементами, создавая красивую и функциональную композицию.
+            Игроки выбирают из множества растений, дорожек и фонтанов для создания сада мечты и настройки 
+              его внешнего вида. 
+            Геймплей интуитивен и увлекателен, позволяя игрокам наслаждаться созданием своего сада и сравнивать его с другими.</p>
+        </div>
+
+        <input type="checkbox" name="chacor" id="chacor3" />
+        <label for="chacor3">3 игра - Cliker Game</label>
+        <div class="acor-body">
+            <p>Cliker Game - это категория игр, в которых игроку нужно нажимать на экран, чтобы добиться каких-то результатов. 
+              Это могут быть игры на сбор ресурсов, улучшение персонажа, достижение рекордов и т.д. 
+              Эти игры часто имеют простой, но затягивающий геймплей, который может быть очень сложным для освоения.</p>
+        </div>

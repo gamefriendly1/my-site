@@ -1,0 +1,15 @@
+        <div class="col-sm-4 thumb text-center animate"> 
+        </div>
+        <ul id="giflist" class="clearfix">
+            <li><a href="imgs/ezgif.com-video-to-gif.gif" target="_blank"><img src="imgs/est ima.png" data-orig="imgs/est ima.png" width="345" height="185"></a></li>
+            
+            <li><a href="imgs/ezgif.com-video-to-gif (1).gif" target="_blank"><img src="imgs/net imeni.png" data-orig="imgs/net imeni.png" width="345" height="185"></a></li>
+          </ul>
+
+          
+          <a href="index.html" class="button10">Выйти в меню</a>
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
